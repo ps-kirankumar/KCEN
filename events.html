@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Kansas City</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Kansas City Event Notifier</h1>
+    </header>
+    <section id="filterSection">
+        <label for="eventType">Event Type:</label>
+        <select id="eventType" name="eventType">
+            <option value="">All</option>
+            <option value="music">Music</option>
+            <option value="sports">Sports</option>
+            <option value="arts">Arts & Theater</option>
+            <option value="film">Film</option>
+            <option value="miscellaneous">Miscellaneous</option>
+        </select>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+        <button id="filterButton">Filter Events</button>
+    </section>
+    <section id="eventsList">
+        <p>Loading events...</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
