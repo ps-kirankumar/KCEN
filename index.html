@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kansas City Event Notifier</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>KCEN - Kansas City Event Notifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://source.unsplash.com/50x50/?kansas-city" type="image/x-icon">
 </head>
 <body>
-    <h1>Kansas City Event Notifier</h1>
-    <input type="text" id="search" placeholder="Search for events...">
-    <ul id="event-list"></ul>
+    <header>
+        <div class="overlay"></div>
+        <h1>Welcome to Kansas City Event Notifier</h1>
+        <p>Your go-to source for the latest events in Kansas City!</p>
+    </header>
+    <main>
+        <section class="auth">
+            <div id="loginFormContainer">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register here</a>.</p>
+                </form>
+            </div>
+            <div id="registerFormContainer" style="display: none;">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required>
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required>
+                    <button type="submit">Register</button>
+                    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a>.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KCEN. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
